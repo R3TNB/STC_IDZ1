@@ -25,5 +25,5 @@ y3 = 10*cos(2*pi*f3*t);
 sound(y2,fs);
 sound(y1,fs);
 sound(y3,fs);
-%filename = 'sound1.wav';
-%audiowrite(filename,y,fs);
+filename = 'sound1.wav';
+audiowrite(filename,y1+y2+y3,fs);
