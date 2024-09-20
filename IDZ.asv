@@ -30,15 +30,13 @@ y2 = 10*cos(2*pi*f2*t);
 y3 = 10*cos(2*pi*f3*t);
 
 %Раздельное воспроизведение тонического трезвучия
-%sound(y2,fs);
-%sound(y1,fs);
-%sound(y3,fs);
+sound(y2,fs);
+sound(y1,fs);
+sound(y3,fs);
 
 %Добавление АБГШ
-SNR = 10; %ОСШ
-Y = awgn(y1,SNR);
-plot(t,Y)
+Y=awgn(y1,SNR)
 
 %Генерация WAV-файла
 filename = 'sound1.wav';
-audiowrite(filename,Y,fs);
+audiowrite(filename,y1,fs);
